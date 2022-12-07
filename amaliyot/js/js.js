@@ -19,7 +19,7 @@ const serial = prompt("Oxirgi ko'rgan serialingiz"),
       serial1 = prompt("Oxirgi ko'rgan serialingiz"),
       baho1 = +prompt("Nechta baho berasiz");
 
-
+// bjektga qo'shish
 seriesDB.series[serial] = baho;
 seriesDB.series[serial1] = baho1;
 
