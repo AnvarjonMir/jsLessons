@@ -36,3 +36,59 @@ for (let i = 1; i <= 10; i++) {
     }
      console.log(i)
 }
+
+/*
+let number = 1;
+
+while(number <= 100) {
+    console.log(number);
+    number++;
+}*/
+
+
+
+
+
+// let nomer = 1;
+
+// while(nomer <= 25) {
+//     console.log(nomer);
+//     nomer++;
+// }
+
+
+// let nomer = 1;
+
+// do {
+//     console.log(nomer);
+//     nomer++;
+// } while( nomer <= 35);
+
+
+
+
+// for(let i = 1; i <= 15; i++){
+   
+//     if(i === 8) {
+//         //break;
+//         continue;
+//     }
+
+//     console.log(i);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
