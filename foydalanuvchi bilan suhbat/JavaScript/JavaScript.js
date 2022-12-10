@@ -18,10 +18,10 @@ console.log(currentPlace);
 console.log(typeof currentPlace);  // ma'lumot turini bilib olish uchun ishlatiladi */
 
 
-/*
+
 // prompt ni oldidagi + user tomonidan kelgan ma'lumotni string qilib beradi
-const age = +prompt("How old ere you", "18");
-console.log(age);*/
+// const age = +prompt("How old ere you", "18");
+// console.log(age);
 
 
 
