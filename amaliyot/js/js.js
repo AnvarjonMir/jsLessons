@@ -1,6 +1,21 @@
 "use strict"
 
-const numberOfSeries = +prompt("Nechta serial ko'rdingiz");
+
+
+let numberOfSeries;
+
+
+
+function startApp() {
+
+     numberOfSeries = +prompt("Nechta serial ko'rdingiz", "");
+
+while(numberOfSeries == "" || numberOfSeries == null || isNaN(numberOfSeries)){
+    numberOfSeries = +prompt("Nechta serial ko'rdingiz", "");
+}
+}
+startApp();
+
 
 
 
@@ -12,51 +27,8 @@ const seriesDB = {
     private: false
 }
 
-
-// let i = 0;
-
-// do {
-//     const serial = prompt("Oxirgi ko'rgan serialingiz"),
-//           baho = +prompt("Necha baho berasiz");
-//           i++;
-
-//     if(serial != null && baho != null && serial != "" && baho != ""){
-//         seriesDB.series[serial] = baho;
-//         console.log("done");
-//     }else {
-//         console.log("error");
-//         i--;
-//     }
-
-//     seriesDB.series[serial] = baho;
-   
-// } while(i < 2);
-
-
-
-
-
-
-// while(i < 2) {
-//     const serial = prompt("Oxirgi ko'rgan serialingiz"),
-//           baho = +prompt("Necha baho berasiz");
-//           i++;
-
-//     if(serial != null && baho != null && serial != "" && baho != ""){
-//         seriesDB.series[serial] = baho;
-//         console.log("done");
-//     }else {
-//         console.log("error");
-//         i--;
-//     }
-
-//     seriesDB.series[serial] = baho;
-// }
-
-
-
-
-for(let i = 0; i < 2; i++) {
+function rememberMySeries() {
+    for(let i = 0; i < 2; i++) {
     const serial = prompt("Oxirgi ko'rgan serialingiz"),
           baho = +prompt("Necha baho berasiz");
           
@@ -71,14 +43,18 @@ for(let i = 0; i < 2; i++) {
 
     seriesDB.series[serial] = baho;
 }
+}
+rememberMySeries();
+
 
 
 
 
 console.log(numberOfSeries);
 
-
-if(numberOfSeries.count < 5) {
+function detectLoveSeries() {
+    
+    if(numberOfSeries.count < 5) {
     console.log("Kam serial ko'ribsiz");
 } else if(numberOfSeries <= 5 && numberOfSeries < 10) {
     console.log("Siz klassik serialchi ekansiz");
@@ -87,13 +63,35 @@ if(numberOfSeries.count < 5) {
 } else {
     console.log("Error");
 }
+}
+
+detectLoveSeries();
 
 
-// bjektga qo'shish
+
+function showDb(hidden) {
+
+    if(hidden) {
+        console.log(seriesDB , "SALOM");
+    } else {
+        
+    }
+
+}
 
 
-/*console.log(`${serial}: "${baho}"`)
-console.log(`${serial1}: "${baho1}"`)*/
 
+showDb(!seriesDB.private);
 
-console.log(seriesDB);
+function writeGenres() {
+    for(let i = 0; i <= 2; i++){
+        const newSerial = prompt(`Yaaxshi ko'rgan janringiz ${i + 1}`, "");
+        console.log(`Yaxshi ko'rgan janringiz ${newSerial}.`);
+        seriesDB.genres[i] = newSerial;
+    }
+    
+}   
+
+    
+
+writeGenres();
