@@ -1,22 +1,28 @@
 "use strict"
 
-function first(cb) {
-    // code
-    setTimeout(() =>{  // sun'iy kechiktirish
-        console.log(1); // bu payt da funksiyaning o'rni alashib qoladi va bu noto'g'ri
-        cb();
-    }, 1000);
+// function first() {
+//     setTimeout(() => {
+//         console.log("1");
+//     }, 5000)
     
+// }
+
+// function second() {
+//     console.log("2");
+// }
+
+// first();
+// second();
+
+
+function call(subject, callback) {
+    console.log(`Men ${subject}ni o'rganyapman`);
+    callback();
 }
 
-
-function second() {
-    //code
-    console.groupCollapsed(2);
-}
-
-first(second);
-
+call("JavaScript", function massage(){
+    console.log("Ajoib");
+})
 
 
 
